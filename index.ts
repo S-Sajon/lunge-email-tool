@@ -60,20 +60,29 @@ Object.entries(EmailTemplateInfos).forEach(async ([key, val]) => {
   }
 });
 
-Promise.all(promisesToExhaust).then((values) => {
-  writeFileSync('./dist/output.json', values.join('\n'));
-});
+Promise.all(promisesToExhaust)
+  .then((values) => {
+    writeFileSync('./dist/output.json', values.join('\n'));
+  })
+  .catch((err) => {
+    console.log(err);
+  });
 
 async function convertToBsonString(obj: IEmailTemplate) {
-  const formated = await format(JSON.stringify(obj), {
-    endOfLine: 'lf',
-    parser: 'json',
-  });
-  const currTime = new Date().toISOString();
-  return formated
-    .replace(/"CreateDate": .+,/, `"CreateDate": ISODate("${currTime}"),`)
-    .replace(
-      /"LastUpdateDate": .+,/,
-      `"LastUpdateDate": ISODate("${currTime}"),`
-    );
+  try {
+    const formated = await format(JSON.stringify(obj), {
+      endOfLine: 'lf',
+      parser: 'json',
+    });
+    const currTime = new Date().toISOString();
+    return formated
+      .replace(/"CreateDate": .+,/, `"CreateDate": ISODate("${currTime}"),`)
+      .replace(
+        /"LastUpdateDate": .+,/,
+        `"LastUpdateDate": ISODate("${currTime}"),`
+      );
+  } catch (err) {
+    console.log(err);
+    return '';
+  }
 }
