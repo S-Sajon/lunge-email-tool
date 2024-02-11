@@ -3,66 +3,79 @@ export const EmailTemplateInfos: {
 } = {
   PatientSignup: {
     name: 'PatientSignupTemplate',
-    subject: 'Confirm your Lunge Zürich account',
+    subject:
+      'Bestätigen Sie Ihr LUNGE ZÜRICH-Konto / Confirm your Lunge Zürich account',
   },
   DoctorSignup: {
     name: 'DoctorSignupTemplate',
-    subject: 'Confirm your Lunge Zürich account',
+    subject:
+      'Bestätigen Sie Ihr LUNGE ZÜRICH-Konto / Confirm your Lunge Zürich account',
   },
   PatientFourDayBeforeReminder: {
     name: 'PatientFourDayBeforeReminderTemplate',
-    subject: 'Appointment reminder',
+    subject: 'Terminerinnerung / Appointment reminder',
   },
   PatientWarningReminder: {
     name: 'PatientWarningReminderTemplate',
-    subject: 'Reminder to confirm appointment',
+    subject:
+      'Erinnerung zur Terminbestätigung / Reminder to confirm appointment',
   },
   RecoverAccount: {
     name: 'RecoverAccount',
-    subject: 'Reset your password',
+    subject: 'Passwort zurücksetzen / Reset your password',
   },
   PatientOneDayBeforeReminder: {
     name: 'PatientOneDayBeforeReminderTemplate',
-    subject: 'Appointment reminder',
+    subject: 'Terminerinnerung / Appointment reminder',
   },
   PatientAcknowledgement: {
     name: 'PatientAcknowledgementTemplate',
-    subject: 'Appointment request received',
+    subject: 'Terminanfrage erhalten / Appointment request received',
   },
   AskPatientForConfirmation: {
     name: 'AskPatientForConfirmationTemplate',
-    subject: 'Appointment request confirmed',
+    subject: 'Terminanfrage bestätigt / Appointment request confirmed',
   },
   PatientConfirmation: {
     name: 'PatientConfirmationTemplate',
-    subject: 'Appointment request confirmed',
+    subject: 'Terminanfrage bestätigt / Appointment request confirmed',
   },
   CancellationAppointmentPatient: {
     name: 'CancellationEmailPatient',
-    subject: 'Appointment cancelled',
+    subject: 'Termin abgesagt / Appointment cancelled',
   },
   BookingUpdatedEmailPatient: {
     name: 'BookingUpdatedEmailPatient',
-    subject: 'Appointment details updated',
+    subject: 'Termindaten aktualisiert / Appointment details updated',
   },
   DoctorSavedPrescription: {
     name: 'DoctorSavedPrescriptionTemplate',
-    subject: 'Prescription recorded',
+    subject: 'Verordnung erfasst / Prescription recorded',
   },
-  EventCreated: { name: 'EventCreatedTemplate', subject: 'Event invitation' },
-  EventUpdated: { name: 'EventUpdatedTemplate', subject: 'Event updated' },
-  EventDeleted: { name: 'EventDeletedTemplate', subject: 'Event cancelled' },
+  EventCreated: {
+    name: 'EventCreatedTemplate',
+    subject: 'Einladung zur Sitzung / Event invitation',
+  },
+  EventUpdated: {
+    name: 'EventUpdatedTemplate',
+    subject: 'Aktualisierte Sitzung / Event updated',
+  },
+  EventDeleted: {
+    name: 'EventDeletedTemplate',
+    subject: 'Veranstaltung abgesagt / Event cancelled',
+  },
   '2FAViaEmail': {
     name: '2FAViaEmail',
-    subject: 'Two-Factor Authentication Code',
+    subject:
+      'Zwei-Faktoren-Authentifizierungscode / Two-Factor Authentication Code',
   },
   PatientSavedPrescription: {
     name: 'PatientSavedPrescriptionTemplate',
-    subject: 'Appointment request received',
+    subject: 'Terminanfrage erhalten / Appointment request received',
   },
   PatientRescheduleForNoResponse: {
     name: 'PatientRescheduleForNoResponseTemplate',
-    subject: 'Appointment rescheduled',
+    subject: 'Termin verschoben / Appointment rescheduled',
   },
   GeneralMail: {
     name: 'GeneralMailTemplate',
