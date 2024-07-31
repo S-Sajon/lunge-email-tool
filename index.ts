@@ -70,12 +70,12 @@ Promise.all(promisesToExhaust)
 
 async function convertToBsonString(obj: IEmailTemplate) {
   try {
-    const formated = await format(JSON.stringify(obj), {
+    const formatted = await format(JSON.stringify(obj), {
       endOfLine: 'lf',
       parser: 'json',
     });
     const currTime = new Date().toISOString();
-    return formated
+    return formatted
       .replace(/"CreateDate": .+,/, `"CreateDate": ISODate("${currTime}"),`)
       .replace(
         /"LastUpdateDate": .+,/,
