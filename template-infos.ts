@@ -77,6 +77,14 @@ export const EmailTemplateInfos: {
     name: 'PatientRescheduleAppointment',
     subject: 'Termin verschoben',
   },
+  ResendInvitationToBecomeUser: {
+    name: 'ResendInvitationToBecomeUser',
+    subject: 'Aktivieren Sie Ihr LUNGE ZÜRICH-Konto'
+  },
+  PatientRescheduleForToBeConfirmed: {
+    name: 'PatientRescheduleForToBeConfirmedTemplate',
+    subject: 'Termin verschoben'
+  },
   GeneralMail: {
     name: 'GeneralMailTemplate',
     subject: '{{generalTemplateSubject}}',
