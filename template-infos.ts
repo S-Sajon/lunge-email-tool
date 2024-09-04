@@ -31,7 +31,7 @@ export const EmailTemplateInfos: {
   },
   AskPatientForConfirmation: {
     name: 'AskPatientForConfirmationTemplate',
-    subject: 'Terminanfrage bestätigt',
+    subject: 'Terminanfrage',
   },
   PatientConfirmation: {
     name: 'PatientConfirmationTemplate',
