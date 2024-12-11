@@ -44,7 +44,7 @@ Object.entries(EmailTemplateInfos).forEach(async ([key, val]) => {
       CreatedBy: 'tadmin',
       GeneratedBy: 'CustomGenerator',
       LastUpdatedBy: 'tadmin',
-      MailConfigurationId: 'e02441c6-54c5-406e-aa4b-c5550a5dbfa8',
+      MailConfigurationId: '344275F9-ADB0-43AB-B882-21AAD09D6550',
       IdsAllowedToRead: null,
       RolesAllowedToWrite: null,
       IdsAllowedToWrite: null,

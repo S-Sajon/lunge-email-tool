@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "start": "npm run generate",
     "generate": "ts-node index.ts"
   },
   "keywords": [],
