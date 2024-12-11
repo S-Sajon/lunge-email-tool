@@ -1,5 +1,3 @@
-import {} from 'bson';
-import { Timestamp } from 'mongodb';
 export interface IEmailTemplate {
   _id: string;
   CreateDate: string;
@@ -8,7 +6,7 @@ export interface IEmailTemplate {
   LastUpdateDate: string;
   LastUpdatedBy: 'tadmin';
   Tags: string[];
-  TenantId: 'CC790DD3-FEEF-4651-8F5E-A884494F9BA2';
+  TenantId: string;
   RolesAllowedToRead: ('Anonymous' | 'AppUser' | 'admin')[];
   IdsAllowedToRead: null;
   RolesAllowedToWrite: null;
@@ -17,7 +15,7 @@ export interface IEmailTemplate {
   IdsAllowedToUpdate: null;
   RolesAllowedToDelete: null;
   IdsAllowedToDelete: null;
-  MailConfigurationId: '3190ff4c-4803-4ecb-a31f-fddcf86dc096';
+  MailConfigurationId: string;
   Name: string;
   TemplateBody: string;
   TemplateSubject: string;

@@ -1,92 +1,16 @@
 export const EmailTemplateInfos: {
   [key: string]: { name: string; subject: string };
 } = {
-  PatientSignup: {
-    name: 'PatientSignupTemplate',
-    subject: 'Bestätigen Sie Ihr LUNGE ZÜRICH-Konto',
+  ApproveCleanUpRequest: {
+    name: 'ApproveCleanUpRequest',
+    subject: 'A cleanup request has been approved.',
   },
-  DoctorSignup: {
-    name: 'DoctorSignupTemplate',
-    subject: 'Bestätigen Sie Ihr LUNGE ZÜRICH-Konto',
+  RejectCleanUpRequest: {
+    name: 'RejectCleanUpRequest',
+    subject: 'A cleanup request has been rejected.',
   },
-  PatientFourDayBeforeReminder: {
-    name: 'PatientFourDayBeforeReminderTemplate',
-    subject: 'Terminerinnerung',
-  },
-  PatientWarningReminder: {
-    name: 'PatientWarningReminderTemplate',
-    subject: 'Erinnerung zur Terminbestätigung',
-  },
-  RecoverAccount: {
-    name: 'RecoverAccount',
-    subject: 'Passwort zurücksetzen',
-  },
-  PatientOneDayBeforeReminder: {
-    name: 'PatientOneDayBeforeReminderTemplate',
-    subject: 'Terminerinnerung',
-  },
-  PatientAcknowledgement: {
-    name: 'PatientAcknowledgementTemplate',
-    subject: 'Terminanfrage erhalten',
-  },
-  AskPatientForConfirmation: {
-    name: 'AskPatientForConfirmationTemplate',
-    subject: 'Terminanfrage',
-  },
-  PatientConfirmation: {
-    name: 'PatientConfirmationTemplate',
-    subject: 'Terminanfrage bestätigt',
-  },
-  CancellationAppointmentPatient: {
-    name: 'CancellationEmailPatient',
-    subject: 'Termin abgesagt',
-  },
-  BookingUpdatedEmailPatient: {
-    name: 'BookingUpdatedEmailPatient',
-    subject: 'Termindaten aktualisiert',
-  },
-  DoctorSavedPrescription: {
-    name: 'DoctorSavedPrescriptionTemplate',
-    subject: 'Verordnung erfasst',
-  },
-  EventCreated: {
-    name: 'EventCreatedTemplate',
-    subject: 'Einladung zur Sitzung',
-  },
-  EventUpdated: {
-    name: 'EventUpdatedTemplate',
-    subject: 'Aktualisierte Sitzung',
-  },
-  EventDeleted: {
-    name: 'EventDeletedTemplate',
-    subject: 'Veranstaltung abgesagt',
-  },
-  '2FAViaEmail': {
-    name: '2FAViaEmail',
-    subject: 'Zwei-Faktoren-Authentifizierungscode',
-  },
-  PatientSavedPrescription: {
-    name: 'PatientSavedPrescriptionTemplate',
-    subject: 'Terminanfrage erhalten',
-  },
-  PatientRescheduleForNoResponse: {
-    name: 'PatientRescheduleForNoResponseTemplate',
-    subject: 'Termin verschoben',
-  },
-  PatientRescheduleAppointment: {
-    name: 'PatientRescheduleAppointment',
-    subject: 'Termin verschoben',
-  },
-  ResendInvitationToBecomeUser: {
-    name: 'ResendInvitationToBecomeUser',
-    subject: 'Aktivieren Sie Ihr LUNGE ZÜRICH-Konto'
-  },
-  PatientRescheduleForToBeConfirmed: {
-    name: 'PatientRescheduleForToBeConfirmedTemplate',
-    subject: 'Termin verschoben'
-  },
-  GeneralMail: {
-    name: 'GeneralMailTemplate',
-    subject: '{{generalTemplateSubject}}',
+  ResentCleanUpRequest: {
+    name: 'ResentCleanUpRequest',
+    subject: 'A cleanup request has been resent.',
   },
 };

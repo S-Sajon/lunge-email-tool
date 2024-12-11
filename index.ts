@@ -31,32 +31,32 @@ Object.entries(EmailTemplateInfos).forEach(async ([key, val]) => {
       .replaceAll('"', '"')
       .replaceAll("'", "'");
     const currTime = new Date().toISOString();
-    for (let lang of ['en-US', 'de-DE'] as const) {
-      const emailDataObj: IEmailTemplate = {
-        _id: uuid(),
-        Language: lang,
-        CreateDate: currTime,
-        LastUpdateDate: currTime,
-        Name: val.name,
-        Tags: ['public', 'is-A-' + val.name],
-        TemplateBody: minifiedEscapedHtml,
-        TemplateSubject: val.subject,
-        CreatedBy: 'tadmin',
-        GeneratedBy: 'CustomGenerator',
-        LastUpdatedBy: 'tadmin',
-        MailConfigurationId: '3190ff4c-4803-4ecb-a31f-fddcf86dc096',
-        IdsAllowedToRead: null,
-        RolesAllowedToWrite: null,
-        IdsAllowedToWrite: null,
-        RolesAllowedToUpdate: null,
-        IdsAllowedToUpdate: null,
-        RolesAllowedToDelete: null,
-        IdsAllowedToDelete: null,
-        RolesAllowedToRead: ['Anonymous', 'AppUser', 'admin'],
-        TenantId: 'CC790DD3-FEEF-4651-8F5E-A884494F9BA2',
-      };
-      promisesToExhaust.push(convertToBsonString(emailDataObj));
-    }
+    // for (let lang of ['en-US', 'de-DE'] as const) {
+    const emailDataObj: IEmailTemplate = {
+      _id: uuid(),
+      Language: 'en-US',
+      CreateDate: currTime,
+      LastUpdateDate: currTime,
+      Name: val.name,
+      Tags: ['public', 'is-A-' + val.name],
+      TemplateBody: minifiedEscapedHtml,
+      TemplateSubject: val.subject,
+      CreatedBy: 'tadmin',
+      GeneratedBy: 'CustomGenerator',
+      LastUpdatedBy: 'tadmin',
+      MailConfigurationId: 'e02441c6-54c5-406e-aa4b-c5550a5dbfa8',
+      IdsAllowedToRead: null,
+      RolesAllowedToWrite: null,
+      IdsAllowedToWrite: null,
+      RolesAllowedToUpdate: null,
+      IdsAllowedToUpdate: null,
+      RolesAllowedToDelete: null,
+      IdsAllowedToDelete: null,
+      RolesAllowedToRead: ['Anonymous', 'AppUser'],
+      TenantId: '400DE79B-DCCD-4965-BC93-0A6A8E6AE356',
+    };
+    promisesToExhaust.push(convertToBsonString(emailDataObj));
+    // }
   }
 });
 
