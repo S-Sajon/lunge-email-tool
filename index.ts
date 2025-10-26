@@ -4,12 +4,13 @@ import { format } from 'prettier';
 import { v4 as uuid } from 'uuid';
 import { IEmailTemplate } from './EmailTemplate.interface';
 import { EmailTemplateInfos } from './template-infos';
+import { Document, EJSON } from 'bson';
 
-// BSON.serialize()
+const OVBTenantId = 'F4C03AA9-7396-438F-828C-958CDBF03E6D';
 
 const allEmailData: string[] = [];
 
-const promisesToExhaust: Promise<string>[] = [];
+const promisesToExhaust: Document[] = [];
 
 if (!existsSync('./dist/')) {
   mkdirSync('./dist', { recursive: true });
@@ -27,11 +28,9 @@ Object.entries(EmailTemplateInfos).forEach(async ([key, val]) => {
       collapseWhitespace: true,
       removeEmptyAttributes: true,
       minifyCSS: true,
-    })
-      .replaceAll('"', '"')
-      .replaceAll("'", "'");
-    const currTime = new Date().toISOString();
-    for (let lang of ['en-US', 'de-DE'] as const) {
+    });
+    const currTime = new Date();
+    for (let lang of ['en-US', 'de-DE', 'es-ES'] as const) {
       const emailDataObj: IEmailTemplate = {
         _id: uuid(),
         Language: lang,
@@ -41,10 +40,10 @@ Object.entries(EmailTemplateInfos).forEach(async ([key, val]) => {
         Tags: ['public', 'is-A-' + val.name],
         TemplateBody: minifiedEscapedHtml,
         TemplateSubject: val.subject,
-        CreatedBy: 'tadmin',
+        CreatedBy: 'Sajon',
         GeneratedBy: 'CustomGenerator',
-        LastUpdatedBy: 'tadmin',
-        MailConfigurationId: '3190ff4c-4803-4ecb-a31f-fddcf86dc096',
+        LastUpdatedBy: 'Sajon',
+        MailConfigurationId: null,
         IdsAllowedToRead: null,
         RolesAllowedToWrite: null,
         IdsAllowedToWrite: null,
@@ -52,37 +51,18 @@ Object.entries(EmailTemplateInfos).forEach(async ([key, val]) => {
         IdsAllowedToUpdate: null,
         RolesAllowedToDelete: null,
         IdsAllowedToDelete: null,
-        RolesAllowedToRead: ['Anonymous', 'AppUser', 'admin'],
-        TenantId: 'CC790DD3-FEEF-4651-8F5E-A884494F9BA2',
+        RolesAllowedToRead: null,
+        TenantId: OVBTenantId,
       };
-      promisesToExhaust.push(convertToBsonString(emailDataObj));
+      promisesToExhaust.push(EJSON.serialize(emailDataObj));
     }
   }
 });
 
 Promise.all(promisesToExhaust)
   .then((values) => {
-    writeFileSync('./dist/output.json', values.join('\n'));
+    writeFileSync('./dist/output.json', JSON.stringify(values));
   })
   .catch((err) => {
     console.log(err);
   });
-
-async function convertToBsonString(obj: IEmailTemplate) {
-  try {
-    const formatted = await format(JSON.stringify(obj), {
-      endOfLine: 'lf',
-      parser: 'json',
-    });
-    const currTime = new Date().toISOString();
-    return formatted
-      .replace(/"CreateDate": .+,/, `"CreateDate": ISODate("${currTime}"),`)
-      .replace(
-        /"LastUpdateDate": .+,/,
-        `"LastUpdateDate": ISODate("${currTime}"),`
-      );
-  } catch (err) {
-    console.log(err);
-    return '';
-  }
-}

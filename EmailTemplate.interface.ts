@@ -1,15 +1,15 @@
-import {} from 'bson';
-import { Timestamp } from 'mongodb';
 export interface IEmailTemplate {
   _id: string;
-  CreateDate: string;
-  CreatedBy: 'tadmin';
-  Language: 'en-US' | 'de-DE';
-  LastUpdateDate: string;
-  LastUpdatedBy: 'tadmin';
+  CreateDate: Date;
+  CreatedBy: string;
+  Language: 'en-US' | 'de-DE' | 'es-ES';
+  LastUpdateDate: Date;
+  LastUpdatedBy: string;
   Tags: string[];
-  TenantId: 'CC790DD3-FEEF-4651-8F5E-A884494F9BA2';
-  RolesAllowedToRead: ('Anonymous' | 'AppUser' | 'admin')[];
+  TenantId: string;
+  RolesAllowedToRead:
+    | ('Anonymous' | 'AppUser' | 'ovb_admin' | 'ovb_customer' | 'ovb_admin')[]
+    | null;
   IdsAllowedToRead: null;
   RolesAllowedToWrite: null;
   IdsAllowedToWrite: null;
@@ -17,7 +17,7 @@ export interface IEmailTemplate {
   IdsAllowedToUpdate: null;
   RolesAllowedToDelete: null;
   IdsAllowedToDelete: null;
-  MailConfigurationId: '3190ff4c-4803-4ecb-a31f-fddcf86dc096';
+  MailConfigurationId: string | null;
   Name: string;
   TemplateBody: string;
   TemplateSubject: string;

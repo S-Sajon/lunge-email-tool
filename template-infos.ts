@@ -1,92 +1,36 @@
 export const EmailTemplateInfos: {
   [key: string]: { name: string; subject: string };
 } = {
-  PatientSignup: {
-    name: 'PatientSignupTemplate',
-    subject: 'Bestätigen Sie Ihr LUNGE ZÜRICH-Konto',
+  AppointmentAcceptedInperson: {
+    name: 'AppointmentAcceptedInperson',
+    subject: 'Appointment Accepted',
   },
-  DoctorSignup: {
-    name: 'DoctorSignupTemplate',
-    subject: 'Bestätigen Sie Ihr LUNGE ZÜRICH-Konto',
+  AppointmentAcceptedOnline: {
+    name: 'AppointmentAcceptedOnline',
+    subject: 'Appointment Accepted',
   },
-  PatientFourDayBeforeReminder: {
-    name: 'PatientFourDayBeforeReminderTemplate',
-    subject: 'Terminerinnerung',
+  AppointmentBookedInperson: {
+    name: 'AppointmentBookedInperson',
+    subject: 'Appointment Booked',
   },
-  PatientWarningReminder: {
-    name: 'PatientWarningReminderTemplate',
-    subject: 'Erinnerung zur Terminbestätigung',
+  AppointmentBookedOnline: {
+    name: 'AppointmentBookedOnline',
+    subject: 'Appointment Booked',
   },
-  RecoverAccount: {
-    name: 'RecoverAccount',
-    subject: 'Passwort zurücksetzen',
+  AppointmentRescheduledInperson: {
+    name: 'AppointmentRescheduledInperson',
+    subject: 'Appointment Rescheduled',
   },
-  PatientOneDayBeforeReminder: {
-    name: 'PatientOneDayBeforeReminderTemplate',
-    subject: 'Terminerinnerung',
+  AppointmentRescheduledOnline: {
+    name: 'AppointmentRescheduledOnline',
+    subject: 'Appointment Rescheduled',
   },
-  PatientAcknowledgement: {
-    name: 'PatientAcknowledgementTemplate',
-    subject: 'Terminanfrage erhalten',
+  AppointmentRejectedInperson: {
+    name: 'AppointmentRejectedInperson',
+    subject: 'Appointment Rejected',
   },
-  AskPatientForConfirmation: {
-    name: 'AskPatientForConfirmationTemplate',
-    subject: 'Terminanfrage',
-  },
-  PatientConfirmation: {
-    name: 'PatientConfirmationTemplate',
-    subject: 'Terminanfrage bestätigt',
-  },
-  CancellationAppointmentPatient: {
-    name: 'CancellationEmailPatient',
-    subject: 'Termin abgesagt',
-  },
-  BookingUpdatedEmailPatient: {
-    name: 'BookingUpdatedEmailPatient',
-    subject: 'Termindaten aktualisiert',
-  },
-  DoctorSavedPrescription: {
-    name: 'DoctorSavedPrescriptionTemplate',
-    subject: 'Verordnung erfasst',
-  },
-  EventCreated: {
-    name: 'EventCreatedTemplate',
-    subject: 'Einladung zur Sitzung',
-  },
-  EventUpdated: {
-    name: 'EventUpdatedTemplate',
-    subject: 'Aktualisierte Sitzung',
-  },
-  EventDeleted: {
-    name: 'EventDeletedTemplate',
-    subject: 'Veranstaltung abgesagt',
-  },
-  '2FAViaEmail': {
-    name: '2FAViaEmail',
-    subject: 'Zwei-Faktoren-Authentifizierungscode',
-  },
-  PatientSavedPrescription: {
-    name: 'PatientSavedPrescriptionTemplate',
-    subject: 'Terminanfrage erhalten',
-  },
-  PatientRescheduleForNoResponse: {
-    name: 'PatientRescheduleForNoResponseTemplate',
-    subject: 'Termin verschoben',
-  },
-  PatientRescheduleAppointment: {
-    name: 'PatientRescheduleAppointment',
-    subject: 'Termin verschoben',
-  },
-  ResendInvitationToBecomeUser: {
-    name: 'ResendInvitationToBecomeUser',
-    subject: 'Aktivieren Sie Ihr LUNGE ZÜRICH-Konto'
-  },
-  PatientRescheduleForToBeConfirmed: {
-    name: 'PatientRescheduleForToBeConfirmedTemplate',
-    subject: 'Termin verschoben'
-  },
-  GeneralMail: {
-    name: 'GeneralMailTemplate',
-    subject: '{{generalTemplateSubject}}',
+  AppointmentRejectedOnline: {
+    name: 'AppointmentRejectedOnline',
+    subject: 'Appointment Rejected',
   },
 };
